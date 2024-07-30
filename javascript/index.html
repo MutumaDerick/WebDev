@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+     <html>
+        <head>
+            <title></title>
+            <style>
+                p {
+                    font-size: 30px;
+                    color: aquamarine;
+                }
+            </style>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <h1 id="benefit_heading" style="color: crimson;">My Website</h1>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h2>Main Content</h2>
+                <p onclick="changeColor(this);" id="main_p">This is the main content of the page.</p>
+                <section>
+                    <h3>Benefits of Semantic Elements</h3>
+                    <p>They improve code readability and enhance accessibility.</p>
+                </section>
+                <figure>
+                    <img src="../basic/web1.image.jpg" width="300" height="200">
+                </figure> 
+                <aside>
+                    <h3>RElated links</h3>
+                    <ul>
+                        <li><a href="">Understanding HTML</a></li>
+                    </ul>
+                </aside>
+                <div>
+                    <canvas id="mychart"></canvas>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    const ctx = document.getElementById('mychart');
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Purple', 'Orange'],
+                            datasets: [{
+                                label: 'Number of Votes',
+                                data: [12,19,3,5,8,13],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </main>
+            <footer>
+                <p>&copy; 2024. My Website. All rights reserved</p>
+            </footer>
+            <script src="script.js" >
+
+            </script>
+         </body>
+     </html>
+     
